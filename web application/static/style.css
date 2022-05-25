@@ -14,6 +14,7 @@ body{
     margin: 20px auto;
     box-shadow: 2px 2px 4px rgb(95, 95, 95);
     padding: 30px;
+    border-radius: 10px;
 }
   
 .wrapper .title{
