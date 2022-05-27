@@ -5,27 +5,34 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: wheat;
+
     padding: 0 10px;
 }
 .wrapper{
+    max-width: 600px;
     width: 100%;
     background: #fff;
     margin: 20px auto;
-    box-shadow: 2px 2px 4px rgb(95, 95, 95);
+    box-shadow: 0px 8px 24px rgb(95, 95, 95);
     padding: 30px;
     border-radius: 10px;
+}
+.wrapper .title-name{
+    color: #31C537;
 }
   
 .wrapper .title{
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 25px;
     color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
 }
   
+.wrapper .sub-title{
+
+    /* text-align: center; */
+    margin-bottom: 32px;
+}
 .wrapper .form{
     width: 100%;
 }
@@ -52,24 +59,31 @@ body{
 .check label{
     padding: 0px 10px 0px 0px;
 }
+.wrapper .form .inputfield{
+    display: block;
+}
 
 .wrapper .form .inputfield .input{
     width: 100%;
     outline: none;
-    border: 1px solid #d5dbd9;
-    box-shadow: 1px 1px 1px #afafaf;
+    border: 1px solid #F0F2F6;
     font-size: 15px;
-    padding: 8px 10px;
+    height: 37px;
+    background-color: #F0F2F6;
     border-radius: 3px;
 }
 
 .wrapper .form .inputfield .custom_select{
     position: relative;
+    margin-bottom: 25px;
     width: 100%;
-    box-shadow: 1px 1px 1px #afafaf;
     height: 37px;
 }
-  
+.wrapper .form .inputfield .custom_select .option-color{
+    border: 1px solid #F0F2F6;
+    background-color: #F0F2F6;
+}
+.wrapper .form .inputfield .custom_select .option-color 
 .wrapper .form .inputfield .custom_select:before{
     position: absolute;
     top: 12px;
@@ -91,12 +105,11 @@ body{
     padding: 10px;
     font-size: 14px; 
     border: 0px;
-    background: #00AC50;
+    background: #31C537;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
     border-radius: 10px;
-    text-transform: uppercase;
     outline: none;
     transition: .5s;
 }
@@ -118,6 +131,9 @@ body{
 .result p{
     text-align: center;
     color: black;
+}
+.value p{
+    margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
 }

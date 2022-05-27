@@ -24,7 +24,7 @@ def index():
         opsys = request.form['opsys']
         cpu = request.form['cpuname']
         gpu = request.form['gpuname']
-        touchscreen = request.form.getlist('touchscreen')
+        touchscreen = request.form.getlist('tuochscreen')
         ips = request.form.getlist('ips')
         
         feature_list = []

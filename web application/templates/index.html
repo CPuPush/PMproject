@@ -9,22 +9,38 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="title">Laptop Price Predictor</div>
+        <div class="title">Predict your <span class="title-name">laptop</span> price</div>
+        <div class="sub-title">
+            <p>Fill in this form to predict your laptop price</p>
+        </div>
         <form action="/" method="POST">
             <div class="form">
-                <div class="inputfield">
+                <!-- <div class="inputfield">
                     <label for="ram">Ram (GB)</label>
                     <input class="input" type="text" name="ram" required>
+                </div> -->
+                <div class="inputfield">
+                    <label for="Ram">Ram (in GB)</label>
+                    <div class = "custom_select">
+                        <select name="ram" id="ram" class="option-color">
+                            <option value="" selected hidden>Select one...</option>
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="32">32</option>
+                            <option value="64">64</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="inputfield">
-                    <label for="weight">Weight (Kg)</label>
+                    <label for="weight">Weight (in Kg)</label>
                     <input class="input" type="text" name="weight" required>
                 </div>
                 <div class="inputfield">
-                    <label for="company">Company</label>
+                    <label for="company">Brand</label>
                     <div class = "custom_select">
-                        <select name="company" id="company">
-                            <option value="" selected hidden>Select</option>
+                        <select name="company" id="company" class="option-color">
+                            <option value="" selected hidden>Select one...</option>
                             <option value="acer">Acer</option>
                             <option value="apple">Apple</option>
                             <option value="asus">Asus</option>
@@ -38,15 +54,15 @@
                     </div>
                 </div>
                 <div class="inputfield">
-                    <label for="typename">Type Name</label>
+                    <label for="typename">Type</label>
                     <div class = "custom_select">
-                        <select name="typename" id="typename">
-                            <option value="" selected hidden>Select</option>
+                        <select name="typename" id="typename" class="option-color">
+                            <option value="" selected hidden>select one...</option>
                             <option value="2in1convertible">2 in 1 Convertible</option>
                             <option value="gaming">Gaming</option>
-                            <option value="netbook">Net Book</option>
-                            <option value="notebook">Note Book</option>
-                            <option value="ultrabook">Ultra Book</option>
+                            <option value="netbook">NetBook</option>
+                            <option value="notebook">NoteBook</option>
+                            <option value="ultrabook">UltraBook</option>
                             <option value="workstation">Workstation</option>
                         </select> 
                     </div>
@@ -54,8 +70,8 @@
                 <div class="inputfield">
                     <label for="opsys">Operating System</label>           
                     <div class = "custom_select">
-                        <select name="opsys" id="opsys">
-                            <option value="" selected hidden>Select</option>
+                        <select name="opsys" id="opsys" class="option-color">
+                            <option value="" selected hidden>select one...</option>
                             <option value="windows">Windows</option>
                             <option value="mac">Mac</option>
                             <option value="linux">Linux</option>
@@ -66,8 +82,8 @@
                 <div class="inputfield">
                     <label for="cpuname">CPU</label>   
                     <div class = "custom_select">
-                        <select name="cpuname" id="cpuname">
-                            <option value="" selected hidden>Select</option>
+                        <select name="cpuname" id="cpuname" class="option-color">
+                            <option value="" selected hidden>Select one...</option>
                             <option value="intelcorei3">Intel Core i3</option>
                             <option value="intelcorei5">Intel Core i5</option>
                             <option value="intelcorei7">Intel Core i7</option>
@@ -79,8 +95,8 @@
                 <div class="inputfield">
                     <label for="gpuname">GPU</label>
                     <div class = "custom_select">
-                        <select name="gpuname" id="gpuname">
-                            <option value="" selected hidden>Select</option>
+                        <select name="gpuname" id="gpuname" class="option-color">
+                            <option value="" selected hidden>Select one...</option>
                             <option value="intel">Intel</option>
                             <option value="amd">AMD</option>
                             <option value="nvidia">Nvidia</option>
@@ -93,20 +109,23 @@
                         <input type="checkbox" name="touchscreen">
                     </div>
                     <div>
-                        <label for="ips">IPS</label>
                         <input type="checkbox" name="ips">
+                        <label for="ips">IPS</label>
                     </div>
                 </div>
     
                 <div class="inputfield">
-                    <input class="btn" type="submit" value="Precict Price">
+                    <input class="btn" type="submit" value="Predict">
                 </div>
             </div>
         </form>
 
         <div class="result">
+            <p>The prediction of your laptop price is </p>
             {% if pred_value != 0 %}
-            <p>Estimated Price : Rp. {{pred_value}}</p>
+            <div class="value">
+                <p>Rp. {{pred_value}}</p>
+            </div>
             {% endif %}
         </div>
     </div>
